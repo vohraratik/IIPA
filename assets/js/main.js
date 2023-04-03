@@ -198,24 +198,23 @@
    * Porfolio isotope and filter
    */
   window.addEventListener("load", () => {
-    let portfolioContainer = select(".portfolio-container");
+    let portfolioContainer = select("#portfolio-grid");
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: ".portfolio-item",
-        layoutMode: "fitRows",
+        itemSelector: ".item",
       });
 
-      let portfolioFilters = select("#portfolio-flters li", true);
+      let portfolioFilters = select("#portfolio-flters a", true);
 
       on(
         "click",
-        "#portfolio-flters li",
+        "#portfolio-flters a",
         function (e) {
           e.preventDefault();
           portfolioFilters.forEach(function (el) {
-            el.classList.remove("filter-active");
+            el.classList.remove("active");
           });
-          this.classList.add("filter-active");
+          this.classList.add("active");
 
           portfolioIsotope.arrange({
             filter: this.getAttribute("data-filter"),
@@ -228,7 +227,6 @@
       );
     }
   });
-
   /**
    * Initiate portfolio lightbox
    */

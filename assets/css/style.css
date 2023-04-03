@@ -349,13 +349,14 @@ h6 {
   width: 100%;
   height: 80vh;
   margin-top: 70px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/assets/img/iipa-hero.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/img/iipa-hero.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   background-attachment: fixed;
 }
+
 #hero2 {
   width: 100%;
   height: 70vh;
@@ -367,6 +368,7 @@ h6 {
   position: relative;
   background-attachment: fixed;
 }
+
 .heading {
   /* border: #ffffff solid; */
   background-color: #171a3e85;
@@ -411,6 +413,7 @@ h6 {
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
+
 @media screen and (min-width: 480px) {
   .hero2.image {
     width: 10vw;
@@ -489,6 +492,7 @@ h6 {
     transform: translateY(-10px);
   }
 }
+
 #hero2 {
   width: 100%;
   height: 60vh;
@@ -545,6 +549,7 @@ h6 {
 #hero2 .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
+
 @media screen and (min-width: 480px) {
   .hero2.image {
     width: 10vw;
@@ -782,7 +787,9 @@ section {
 # About Us
 --------------------------------------------------------------*/
 .about {
-  background: #f3f9fd;}
+  background: #f3f9fd;
+}
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -815,7 +822,7 @@ section {
   margin-bottom: 0;
 }
 
-.about .content{
+.about .content {
   justify-content: center;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
@@ -1010,7 +1017,7 @@ section {
 --------------------------------------------------------------*/
 .more-services {
   padding-top: 20px;
-  background-color: #171a3e ;
+  background-color: #171a3e;
 }
 
 .more-services .card {
@@ -1237,7 +1244,7 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #222222;
+  color: #eaeaea;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
   border-radius: 3px;
@@ -1246,7 +1253,7 @@ section {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: #fff;
-  background: #171a3e;
+  background: #ffffff;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1282,7 +1289,7 @@ section {
 
 .portfolio .portfolio-wrap img {
   transition: all ease-in-out 0.3s;
-  
+
 }
 
 .portfolio .portfolio-wrap .portfolio-info {
@@ -1513,14 +1520,16 @@ section {
 .doctors .member .social a+a {
   margin-left: 8px;
 }
+
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-.team{
+.team {
   justify-content: center;
   /* align-items: center; */
   align-content: center;
 }
+
 .team .member {
   margin-bottom: 20px;
   overflow: hidden;
@@ -1982,6 +1991,7 @@ section {
 #footer .footer-links a:hover {
   color: #171a3e;
 }
+
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -1996,14 +2006,15 @@ section {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2022,3 +2033,124 @@ section {
   transform: rotateY(180deg);
 }
 
+
+
+.courses {
+  margin-top: 160px;
+}
+
+.event_filter {
+  text-align: center;
+}
+
+.event_filter {
+  background-color: #f1f0fe;
+  border-radius: 50px;
+  padding: 15px 40px;
+  list-style: none;
+  margin: 0 auto 70px;
+  max-width: max-content;
+}
+
+.event_filter li {
+  display: inline-block;
+  margin: 0px 20px;
+}
+
+.event_filter li a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e1e1e;
+  transition: all .3s;
+}
+
+.event_filter li .event_filter li a.is_active,
+.event_filter li a:hover {
+  color: #7a6ad8;
+}
+
+.events_item .thumb {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.events_item .thumb img {
+  margin-bottom: -5px;
+}
+
+.events_item .thumb span.category {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #7a6ad8;
+  background-color: rgba(250, 250, 250, 0.95);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.events_item .thumb span.price {
+  position: absolute;
+  right: -30px;
+  top: -50px;
+  background-color: rgba(122, 106, 216, 0.95);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all .3s;
+}
+
+.events_item .thumb span.price h6 {
+  margin-top: 72px;
+  margin-left: 22px;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+}
+
+.events_item .thumb span.price em {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  vertical-align: top;
+}
+
+.events_item {
+  background-color: #f1f0fe;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.events_item .down-content {
+  padding: 20px 30px 25px 30px;
+}
+
+.events_item .down-content span.author {
+  color: #7a6ad8;
+  font-size: 15px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.events_item .down-content h4 {
+  font-size: 22px;
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.events_item:hover .down-content h4 {
+  color: #7a6ad8;
+}
+
+.events_item:hover .thumb span.price {
+  transform: scale(1.2);
+}

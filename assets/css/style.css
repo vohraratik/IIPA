@@ -703,7 +703,7 @@ section {
 }
 
 .section-bg {
-  background-color: #e3f0fb;
+  background-color: #edf5fb;
 }
 
 .section-title {
@@ -712,7 +712,7 @@ section {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
@@ -722,7 +722,7 @@ section {
 .section-title h2::before,
 .section-title h2::after {
   content: "";
-  width: 50px;
+  width: 20px;
   height: 2px;
   background: #171a3e;
   display: inline-block;

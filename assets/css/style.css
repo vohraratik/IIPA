@@ -243,7 +243,7 @@ h6 {
   transition: 0.5s;
 }
 
-.mobile-nav-toggle.bi-x {
+.navbar-toggler {
   color: #fff;
 }
 
@@ -362,7 +362,7 @@ h6 {
   height: 70vh;
   margin-top: 70px;
   background-image: url(/assets/img/herosection/Graphic\ designer\ \(1\).png);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -675,7 +675,11 @@ h6 {
 }
 
 .departments .details p {
-  color: #777777;
+  color: #4a4949;
+}
+
+.departments .details li {
+  color: #4a4949;
 }
 
 .departments .details p:last-child {

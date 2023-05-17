@@ -2158,3 +2158,35 @@ section {
 .events_item:hover .thumb span.price {
   transform: scale(1.2);
 }
+
+.marquee__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+  /* animation: scroll var(--duration) linear infinite; */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__group {
+    animation-play-state: paused;
+  }
+}
+
+.marquee__group img {
+  max-width: clamp(1rem, 1rem + 28vmin, 20rem);
+  aspect-ratio: 2;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}

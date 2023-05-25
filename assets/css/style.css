@@ -67,6 +67,103 @@ h6 {
   }
 }
 
+
+/* 
+---------------------------------------------
+banner
+--------------------------------------------- 
+*/
+
+.main-banner {
+  position: relative;
+  max-height: 100%;
+  overflow: hidden;
+  margin-bottom: -7px;
+}
+
+#bg-video {
+  min-width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: fill;
+  z-index: -1;
+
+}
+
+#bg-video::-webkit-media-controls {
+  display: none !important;
+}
+
+.video-overlay {
+  position: absolute;
+  background-color: rgba(31, 39, 43, 0.492);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 109vh;
+}
+
+.main-banner .caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.main-banner .caption h6 {
+  margin-top: 0px;
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+  border: #ffffff solid;
+  background-color: #171a3e85;
+  width: 100%;
+}
+
+.main-banner .caption h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.main-banner .caption h2 em {
+  font-style: normal;
+  color: #f5a425;
+  font-weight: 900;
+}
+
+.main-banner .caption p {
+  color: #fff;
+  font-size: 14px;
+  max-width: 570px;
+}
+
+.main-banner .caption .main-button-red {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+
+  .main-banner .caption h6 {
+    font-weight: 300;
+    font-size: x-large;
+  }
+
+  .main-banner .caption h2 {
+    font-size: 36px;
+  }
+
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -370,7 +467,7 @@ h6 {
 }
 
 .heading {
-  /* border: #ffffff solid; */
+  border: #ffffff solid;
   background-color: #171a3e85;
   width: 100%;
 
@@ -636,6 +733,8 @@ h6 {
 --------------------------------------------------------------*/
 .departments {
   overflow: hidden;
+  padding: 15px;
+
 }
 
 .departments .nav-tabs {
@@ -712,7 +811,7 @@ section {
 
 .section-title {
   text-align: center;
-  /* padding-bottom: 20px; */
+  padding-top: 20px;
 }
 
 .section-title h2 {
@@ -1024,6 +1123,12 @@ section {
   background-color: #171a3e;
 }
 
+.more-services1 {
+  padding-top: 20px;
+
+}
+
+
 .more-services .card {
   border: 0;
   padding: 20px 20px 20px 20px;
@@ -1032,6 +1137,17 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.more-services1 .card {
+  border: 10;
+  /* padding: 2px 2px 2px 2px; */
+  margin: 10px;
+  position: relative;
+  width: 100%;
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; */
 }
 
 .more-services .card-body {
@@ -1044,7 +1160,24 @@ section {
   border-radius: 5px;
 }
 
+.more-services1 .card-body {
+  z-index: 10;
+  background: #edf5fb;
+  border: #080e4f solid 2px;
+  /* padding: 15px 30px; */
+  /* box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); */
+  transition: 0.3s;
+  transition: ease-in-out 0.4s;
+  /* border-radius: px; */
+}
+
 .more-services .card-title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.more-services1 .card-title {
   font-weight: 700;
   text-align: center;
   margin-bottom: 15px;
@@ -1054,7 +1187,15 @@ section {
   color: #222222;
 }
 
+.more-services2 .card-title a {
+  color: #222222;
+}
+
 .more-services .card-text {
+  color: #5e5e5e;
+}
+
+.more-services1 .card-text {
   color: #5e5e5e;
 }
 
@@ -1066,7 +1207,19 @@ section {
   transition: 0.4s;
 }
 
+.more-services1 .read-more a {
+  color: #777777;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  transition: 0.4s;
+}
+
 .more-services .read-more a:hover {
+  text-decoration: underline;
+}
+
+.more-services1 .read-more a:hover {
   text-decoration: underline;
 }
 
@@ -1074,6 +1227,9 @@ section {
   background: #171a3e9d;
   border: whitesmoke solid 5px;
 }
+
+
+
 
 .more-services .card:hover .read-more a,
 .more-services .card:hover .card-title,
@@ -2190,3 +2346,336 @@ section {
     transform: translateX(calc(-100% - var(--gap)));
   }
 }
+
+/* ROADMAP */
+
+/* body {
+  font-family: tahoma;
+  padding: 40px 0;
+} */
+
+.main-timeline {
+  font-family: tahoma;
+  padding: 20px 0;
+  position: relative;
+}
+
+.main-timeline::before,
+.main-timeline::after {
+  content: "";
+  height: 40px;
+  width: 40px;
+  background-color: #e7e7e7;
+  border-radius: 50%;
+  border: 10px solid #303334;
+  transform: translatex(-50%);
+  position: absolute;
+  left: 50%;
+  top: -15px;
+  z-index: 2;
+}
+
+.main-timeline::after {
+  top: auto;
+  bottom: 15px;
+}
+
+.main-timeline .timeline {
+  padding: 35px 0;
+  margin-top: -30px;
+  position: relative;
+  z-index: 1;
+}
+
+.main-timeline .timeline::before,
+.main-timeline .timeline::after {
+  content: "";
+  height: 100%;
+  width: 50%;
+  border-radius: 110px 0 0 110px;
+  border: 15px solid #46b2bc;
+  border-right: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.main-timeline .timeline::after {
+  height: calc(100% - 30px);
+  width: calc(50% - 12px);
+  border-color: #65c7d0;
+  left: 12px;
+  top: 15px;
+}
+
+.main-timeline .timeline-content {
+  display: inline-block;
+}
+
+.main-timeline .timeline-content:hover {
+  text-decoration: none;
+}
+
+.main-timeline .timeline-year {
+  color: #65c7d0;
+  font-size: 50px;
+  font-weight: 600;
+  display: inline-block;
+  transform: translatey(-50%);
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+.main-timeline .timeline-icon {
+  color: #65c7d0;
+  font-size: 70px;
+  display: inline-block;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 34%;
+  top: 50%;
+}
+
+.main-timeline .content {
+  color: #909090;
+  width: 50%;
+  padding: 20px;
+  display: inline-block;
+  float: right;
+}
+
+.main-timeline .title {
+  color: #65c7d0;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 5px 0;
+}
+
+.main-timeline .description {
+  font-size: 16px;
+  margin: 0;
+}
+
+.main-timeline .timeline:nth-child(even)::before {
+  left: auto;
+  right: 0;
+  border-radius: 0 110px 110px 0;
+  border: 15px solid red;
+  border-left: none;
+}
+
+.main-timeline .timeline:nth-child(even)::after {
+  left: auto;
+  right: 12px;
+  border-radius: 0 100px 100px 0;
+  border: 15px solid green;
+  border-left: none;
+}
+
+.main-timeline .timeline:nth-child(even) .content {
+  float: left;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-year {
+  left: auto;
+  right: 10%;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-icon {
+  left: auto;
+  right: 32%;
+}
+
+.main-timeline .timeline:nth-child(5n+1)::before {
+  border-color: #46b2bc;
+}
+
+.main-timeline .timeline:nth-child(5n+1)::after {
+  border-color: #65c7d0;
+}
+
+.main-timeline .timeline:nth-child(5n+1) .timeline-icon {
+  color: #65c7d0;
+}
+
+.main-timeline .timeline:nth-child(5n+1) .timeline-year {
+  color: #65c7d0;
+}
+
+.main-timeline .timeline:nth-child(5n+1) .title {
+  color: #65c7d0;
+}
+
+.main-timeline .timeline:nth-child(5n+2)::before {
+  border-color: #ea3c14;
+}
+
+.main-timeline .timeline:nth-child(5n+2)::after {
+  border-color: #EF5720;
+}
+
+.main-timeline .timeline:nth-child(5n+2) .timeline-icon {
+  color: #EA3C14;
+}
+
+.main-timeline .timeline:nth-child(5n+2) .timeline-year {
+  color: #EA3C14;
+}
+
+.main-timeline .timeline:nth-child(5n+2) .title {
+  color: #EA3C14;
+}
+
+.main-timeline .timeline:nth-child(5n+3)::before {
+  border-color: #8CC63E;
+}
+
+.main-timeline .timeline:nth-child(5n+3)::after {
+  border-color: #6CAF29;
+}
+
+.main-timeline .timeline:nth-child(5n+3) .timeline-icon {
+  color: #8CC63E;
+}
+
+.main-timeline .timeline:nth-child(5n+3) .timeline-year {
+  color: #8CC63E;
+}
+
+.main-timeline .timeline:nth-child(5n+3) .title {
+  color: #8CC63E;
+}
+
+.main-timeline .timeline:nth-child(5n+4)::before {
+  border-color: #F99324;
+}
+
+.main-timeline .timeline:nth-child(5n+4)::after {
+  border-color: #FBB03B;
+}
+
+.main-timeline .timeline:nth-child(5n+4) .timeline-icon {
+  color: #F99324;
+}
+
+.main-timeline .timeline:nth-child(5n+4) .timeline-year {
+  color: #F99324;
+}
+
+.main-timeline .timeline:nth-child(5n+4) .title {
+  color: #F99324;
+}
+
+.main-timeline .timeline:nth-child(5n+5)::before {
+  border-color: #0071BD;
+}
+
+.main-timeline .timeline:nth-child(5n+5)::after {
+  border-color: #0050A3;
+}
+
+.main-timeline .timeline:nth-child(5n+5) .timeline-icon {
+  color: #0071BD;
+}
+
+.main-timeline .timeline:nth-child(5n+5) .timeline-year {
+  color: #0071BD;
+}
+
+.main-timeline .timeline:nth-child(5n+5) .title {
+  color: #0071BD;
+}
+
+@media screen and (max-width:1200px) {
+  .main-timeline .timeline:after {
+    border-radius: 88px 0 0 88px;
+  }
+
+  .main-timeline .timeline:nth-child(even):after {
+    border-radius: 0 88px 88px 0;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .main-timeline .timeline {
+    margin-top: -19px;
+  }
+
+  .main-timeline .timeline:before {
+    border-radius: 50px 0 0 50px;
+    border-width: 10px;
+  }
+
+  .main-timeline .timeline:after {
+    height: calc(100% - 18px);
+    width: calc(50% - 9px);
+    border-radius: 43px 0 0 43px;
+    border-width: 10px;
+    top: 9px;
+    left: 9px;
+  }
+
+  .main-timeline .timeline:nth-child(even):before {
+    border-radius: 0 50px 50px 0;
+    border-width: 10px;
+  }
+
+  .main-timeline .timeline:nth-child(even):after {
+    height: calc(100% - 18px);
+    width: calc(50% - 9px);
+    border-radius: 0 43px 43px 0;
+    border-width: 10px;
+    top: 9px;
+    right: 9px;
+  }
+
+  .main-timeline .timeline-icon {
+    font-size: 60px;
+  }
+
+  .main-timeline .timeline-year {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width:479px) {
+  .main-timeline .timeline-icon {
+    font-size: 50px;
+    transform: translateY(0);
+    top: 25%;
+    left: 10%;
+  }
+
+  .main-timeline .timeline-year {
+    font-size: 25px;
+    transform: translateY(0);
+    top: 65%;
+    left: 9%;
+  }
+
+  .main-timeline .content {
+    width: 68%;
+    padding: 10px;
+  }
+
+  .main-timeline .title {
+    font-size: 18px;
+  }
+
+  .main-timeline .timeline:nth-child(even) .timeline-icon {
+    right: 10%;
+  }
+
+  .main-timeline .timeline:nth-child(even) .timeline-year {
+    right: 9%;
+  }
+}
+
+
+
+
+
+/*  */
